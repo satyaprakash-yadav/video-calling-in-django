@@ -1,0 +1,34 @@
+{% extends "chat/base.html" %}
+{% load static %}
+{% block title %}Room{% endblock title %}
+
+{% block content %}
+
+<main>
+    <section id="room-name-wrapper">
+        <p>Room Name : <span id="room-name"></span></p>
+    </section>
+
+    <section id="video-streams"></section>
+
+    <section id="controls-wrapper">
+
+        <div class="icon-wrapper">
+            <img class="control-icon" id="mic-btn" src="{% static "chat/images/icons-microphone.png" %}" />
+        </div>
+
+        <div class="icon-wrapper">
+            <img class="control-icon" id="camera-btn" src="{% static "chat/images/video-camera.png" %}" />
+        </div>
+
+        <div class="icon-wrapper">
+            <img class="control-icon" id="leave-btn" src="{% static "chat/images/switch.png" %}" />
+        </div>
+
+    </section>
+    
+</main>
+
+<script src="{% static "chat/assets/AgoraRTC_N-4.18.2.js" %}"></script>
+<script src="{% static "chat/js/streams.js" %}"></script>
+{% endblock content %}
